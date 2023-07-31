@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users System</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="row">
+    <div class="col card">
+      <div class="header-div">
+        <h3><i class="material-icons">manage_accounts</i>Users System </h3>
+        <hr>
+      </div>
+
+      <div class="table-div">
+        
+        <table class="striped responsive-table teal lighten-4">
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Contraseña</th>
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Correo</th>
+              <th>Teléfono</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="table_body">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="button-div">
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal2" onclick="addNewUser()"><i class="material-icons left">add</i>Agregar</a>
+      </div>
+
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal2" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4 id="modal_header">Agregar Usuario</h4>
+        <hr>
+        &nbsp;
+        <div class="row">
+          <form class="col s12">
+
+            <!-- Campo de Usuario -->
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Placeholder" id="user" type="text" class="validate">
+                <label for="user">Usuario</label>
+              </div>
+            </div>
+
+            <!-- Campo de nombre  -->
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+
+            <!-- Campo de nombre  -->
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Placeholder" id="name" type="text" class="validate">
+                <label for="name">Nombre</label>
+              </div>
+            </div>
+
+            <!-- Campo de Edad  -->
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Placeholder" id="age" type="number" min="0" class="validate">
+                <label for="age">Edad</label>
+              </div>
+            </div>
+
+            <!-- Campo de Email  -->
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Placeholder" id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+
+            <!-- Campo de Telefono -->
+
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Placeholder" id="telephone" type="tel" class="validate">
+                <label for="telephone">Teléfono</label>
+              </div>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn red">Cancelar</a>
+        <a href="#!" id="add_btn" class="modal-close waves-effect btn green">Agregar</a>
+        <a href="#!" id="save_btn" class="modal-close waves-effect btn green">Guardar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Código para inicializar el modal  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const elems = document.querySelectorAll('.modal');
+      M.Modal.init(elems, {});
+    });
+  </script>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
